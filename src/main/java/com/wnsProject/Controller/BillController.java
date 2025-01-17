@@ -73,9 +73,6 @@ public class BillController {
 	    }
 	 
 	 
-	 
-	 
-	 
 	 @PostMapping
 	    public BillGenerated generateBill(@RequestBody BillGenerated bill) {
 	        // Calculate total and other necessary logic
