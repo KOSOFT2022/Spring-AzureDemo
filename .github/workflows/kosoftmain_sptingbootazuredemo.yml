@@ -46,12 +46,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: java-app
-          client-id: ${{75A8DE5DEE13467BB6048361C3D99334}}
-          tenant-id: ${{2AA8F50D0D7A43C6A10F1DABE577D313}}
-          subscription-id: ${{F3241D09E46945CF92DD9DB83052074F}}
-      
-     
-
+          client-id: ${{ secrets.__clientidsecretname__ }}
+          tenant-id: ${{ secrets.__tenantidsecretname__ }}
+          subscription-id: ${{ secrets.__subscriptionidsecretname__ }}
+          
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
